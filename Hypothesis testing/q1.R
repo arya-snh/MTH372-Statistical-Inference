@@ -7,6 +7,7 @@ null_hypothesis <- 15
 
 # Calculate the z-statistic and p-value
 z_stat <- (sample_mean - null_hypothesis) / (sd / sqrt(10))
+z_stat
 p_val <- pnorm(z_stat, lower.tail = FALSE)
 
 # Check if p-value is less than 0.05

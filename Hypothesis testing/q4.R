@@ -10,9 +10,9 @@ n_2 <- 16
 # Calculate the t-statistic and p-value
 t_stat <- (mean_1 - mean_2)/(sqrt( ((s_1)*(s_1)/n_1) + ((s_2)*(s_2)/n_2) ))
 p_val <- pt(abs(t_stat), df = 8, lower.tail = FALSE)
-
+t_stat
 # Check if p-value is less than 0.05
-if(p_val < 0.05) {
+if(p_val < 0.025) {
   print("Reject the null hypothesis")
 } else {
   print("Fail to reject the null hypothesis")

@@ -12,10 +12,10 @@ t_stat
 p_value <- pt(abs(t_stat), df = n - 1, lower.tail = FALSE)
 p_value
 
-if(p_value < 0.05) {
+if(p_value < 0.025) {
   print("Reject the null hypothesis")
 } else {
   print("Fail to reject the null hypothesis")
 }
 
-## Result : "Reject the null hypothesis"
+## Result : Fail to reject the null hypothesis"

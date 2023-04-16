@@ -1,6 +1,6 @@
 A <- c(49, 53, 51, 52, 47, 50, 52, 53)
 B <- c(52, 55, 52, 53, 50, 54, 54, 53)
-diff <- B - A
+diff <- A - B
 diff
 
 n <- length(diff)
@@ -17,7 +17,7 @@ t_stat
 p_value <- pt(abs(t_stat), df = n - 1, lower.tail = FALSE)
 p_value
 
-if(p_value < 0.05) {
+if(p_value < 0.025) {
   print("Reject the null hypothesis")
 } else {
   print("Fail to reject the null hypothesis")
